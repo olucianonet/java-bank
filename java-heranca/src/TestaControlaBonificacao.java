@@ -12,8 +12,7 @@ public class TestaControlaBonificacao {
 		cb.registra(s1);
 		cb.registra(a1);
 		
-		System.out.println("Total de bonificações: " + cb.getSoma());
-	
+		System.out.println("Total de bonificações: " + cb.getSoma());	
 		
 	}
 
