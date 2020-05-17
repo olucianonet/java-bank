@@ -15,4 +15,15 @@ public class Gerente extends Funcionario {
 		
 		return this.senha == senha;
 	}
+	
+	public boolean autentica(String cpf, int senha) {
+		
+		return super.getCPF() == cpf && this.senha == senha;
+
+	}
+	
+	@Override
+	public double getBonificacao() {
+		return super.getBonificacao() + super.getSalario();
+	}	
 }
