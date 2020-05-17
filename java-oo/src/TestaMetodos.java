@@ -19,7 +19,7 @@ public class TestaMetodos {
 		System.out.println("Sacando $100.0 em c1 e $10.0 em c2");
 		boolean saqueC1 = c1.saca(100.0);
 		boolean saqueC2 = c2.saca(10.0);
-		
+
 		System.out.println("Saque em c1: " + saqueC1 + ", saque em c2: " + saqueC2);
 		System.out.println("Saldo da c1: " + c1.saldo);
 		System.out.println("Saldo da c2: " + c2.saldo);
