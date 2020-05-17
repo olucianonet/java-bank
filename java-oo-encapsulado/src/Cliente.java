@@ -5,6 +5,17 @@ public class Cliente {
 	private String cpf;
 	private String email;
 
+	public Cliente () {
+		this("Nome", "CPF", "Email");
+	}
+	
+	public Cliente(String nome, String cpf, String email){		
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+	}
+	
 	public String getNome() {
 		return this.nome;
 	}

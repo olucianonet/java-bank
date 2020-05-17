@@ -5,7 +5,24 @@ public class Conta {
 	private int conta;
 	private Cliente titular;
 	private double saldo;
+	
+	private static int totalDeContas = 0;
+	
+	public Conta(){
+		// Chamando o construtor com args.
+		this(1, 1, new Cliente(), 0.0);
+	}	
 
+	public Conta(int agencia, int conta, Cliente cliente, double saldo) {
+		
+		this.agencia = agencia;
+		this.conta = conta;
+		this.titular = cliente;
+		this.saldo = saldo;
+		
+		Conta.totalDeContas++;
+	}
+	
 	public void deposita(double valor) {
 
 		this.saldo += valor;
@@ -51,5 +68,9 @@ public class Conta {
 
 	public double getSaldo() {
 		return this.saldo;
+	}
+
+	public static int getTotalDeContas() {
+		return Conta.totalDeContas;
 	}
 }
