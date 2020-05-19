@@ -1,5 +1,5 @@
 
-public class Fluxo {
+public class Fluxo2 {
 
 	public static void main(String[] args) {
 
@@ -10,7 +10,14 @@ public class Fluxo {
 
 	private static void metodo1() {
 		System.out.println("Ini do metodo1");
-		metodo2();
+		// Nesse caso o método 2 não é finalizado
+		// Já que o catch está controlando o fluxo do
+		// método 1.
+		try {			
+			metodo2();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		System.out.println("Fim do metodo1");
 
 	}
@@ -20,13 +27,7 @@ public class Fluxo {
 		System.out.println("Ini do metodo2");
 		for (int i = 0; i <= 5; i++) {
 			System.out.printf("%d ", i);
-			try {
-				// Com o try/catch ocorreram exceções mas
-				// o fluxo não foi interrompido.
 				int a = i / 0;
-			} catch (ArithmeticException ex) {
-				System.out.println(ex.getMessage());
-			}
 		}
 		System.out.println("Fim do metodo2");
 	}

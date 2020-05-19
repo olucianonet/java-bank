@@ -1,5 +1,5 @@
 
-public class Fluxo {
+public class Fluxo4 {
 
 	public static void main(String[] args) {
 
@@ -10,7 +10,16 @@ public class Fluxo {
 
 	private static void metodo1() {
 		System.out.println("Ini do metodo1");
-		metodo2();
+		// Nesse exemplo, estamos utilizando o catch
+		// porem informando o tipo de exceção errado.
+		// 
+		try {			
+			metodo2();
+			// Como solução poderiamos colocar duas 
+			// Exceções utilizando o pipe
+		} catch (ArithmeticException | NullPointerException e) {
+			System.out.println(e.getMessage());
+		}
 		System.out.println("Fim do metodo1");
 
 	}
@@ -20,13 +29,8 @@ public class Fluxo {
 		System.out.println("Ini do metodo2");
 		for (int i = 0; i <= 5; i++) {
 			System.out.printf("%d ", i);
-			try {
-				// Com o try/catch ocorreram exceções mas
-				// o fluxo não foi interrompido.
-				int a = i / 0;
-			} catch (ArithmeticException ex) {
-				System.out.println(ex.getMessage());
-			}
+			Conta c = null;
+			c.deposita();
 		}
 		System.out.println("Fim do metodo2");
 	}

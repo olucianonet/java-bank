@@ -1,10 +1,19 @@
 
-public class Fluxo {
+public class Fluxo3 {
 
 	public static void main(String[] args) {
 
 		System.out.println("Ini do main");
-		metodo1();
+		// Nesse exemplo o método1 não termina,
+		// pq apesar da exceção ocorrer no metodo2
+		// o fluxo todo é interrompido.
+		try {
+			metodo1();			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			// Imprimindo o rastro da pilha
+			e.printStackTrace();
+		}
 		System.out.println("Fim do main");
 	}
 
@@ -20,13 +29,7 @@ public class Fluxo {
 		System.out.println("Ini do metodo2");
 		for (int i = 0; i <= 5; i++) {
 			System.out.printf("%d ", i);
-			try {
-				// Com o try/catch ocorreram exceções mas
-				// o fluxo não foi interrompido.
 				int a = i / 0;
-			} catch (ArithmeticException ex) {
-				System.out.println(ex.getMessage());
-			}
 		}
 		System.out.println("Fim do metodo2");
 	}
