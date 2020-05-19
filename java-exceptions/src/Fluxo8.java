@@ -1,5 +1,5 @@
 
-public class FluxoComTratamento {
+public class Fluxo8 {
 
 	public static void main(String[] args) {
 
@@ -10,23 +10,19 @@ public class FluxoComTratamento {
 
 	private static void metodo1() {
 		System.out.println("Ini do metodo1");
-
 		try {			
 			metodo2();
-
-		} catch (ArithmeticException | NullPointerException | MinhaExcecao e) {
+			// Nesse caso, mesmo tratando a pilha estoura.
+			// Pois com a recursão infinita tomamos um erro.
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		System.out.println("Fim do metodo1");
 
 	}
 
-	private static void metodo2() {
-
-		System.out.println("Ini do metodo2");
-		throw new MinhaExcecao("Lançando exceções");
-		// Variação: new ArithmeticException();
-//		System.out.println("Fim do metodo2");
+	private static void metodo2() {		
+		metodo2();
 	}
 
 }

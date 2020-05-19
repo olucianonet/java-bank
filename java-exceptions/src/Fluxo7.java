@@ -1,5 +1,5 @@
 
-public class FluxoComTratamento {
+public class Fluxo7 {
 
 	public static void main(String[] args) {
 
@@ -10,11 +10,12 @@ public class FluxoComTratamento {
 
 	private static void metodo1() {
 		System.out.println("Ini do metodo1");
-
+		// Nesse exemplo, estamos utilizando o catch
+		// porem informando o tipo de exceção errado.
+		// 
 		try {			
 			metodo2();
-
-		} catch (ArithmeticException | NullPointerException | MinhaExcecao e) {
+		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 		}
 		System.out.println("Fim do metodo1");
@@ -22,11 +23,14 @@ public class FluxoComTratamento {
 	}
 
 	private static void metodo2() {
-
+		// Ilustrando a pilha de execução.
 		System.out.println("Ini do metodo2");
-		throw new MinhaExcecao("Lançando exceções");
-		// Variação: new ArithmeticException();
-//		System.out.println("Fim do metodo2");
+		for (int i = 0; i <= 5; i++) {
+			System.out.printf("%d ", i);
+			Conta c = null;
+			c.deposita();
+		}
+		System.out.println("Fim do metodo2");
 	}
 
 }
