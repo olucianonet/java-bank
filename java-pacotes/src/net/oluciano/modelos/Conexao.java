@@ -1,3 +1,4 @@
+package net.oluciano.modelos;
 
 public class Conexao {
 
@@ -5,7 +6,7 @@ public class Conexao {
 		System.out.println("Abrindo conexão");
 	}
 	
-	void leDados(boolean illegalArg) {
+	public void leDados(boolean illegalArg) {
 
 		if (illegalArg)
 			throw new IllegalArgumentException("Argumento ilegal recebido!");
@@ -13,7 +14,7 @@ public class Conexao {
 		System.out.println("Recebendo dados");
 	}
 	
-	void fecha() {
+	public void fecha() {
 		System.out.println("Fechando conexão");
 	}
 	

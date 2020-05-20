@@ -1,5 +1,8 @@
+package net.oluciano.modelos;
+import exceptions.SaldoInsuficienteException;
 
-public class Conta {
+@Deprecated
+public class ContaCloseable{
 
 	double saldo;
 	
@@ -16,4 +19,6 @@ public class Conta {
 		
 		this.saldo -= valor;
 	}
+
+
 }

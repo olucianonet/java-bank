@@ -1,3 +1,4 @@
+package net.oluciano.modelos;
 
 public class ConexaoCloseable  implements AutoCloseable{
 
@@ -5,7 +6,7 @@ public class ConexaoCloseable  implements AutoCloseable{
 		System.out.println("Abrindo conexão");
 	}
 	
-	void leDados(boolean illegalArg) {
+	public void leDados(boolean illegalArg) {
 
 		if (illegalArg)
 			throw new IllegalArgumentException("Argumento ilegal recebido!");

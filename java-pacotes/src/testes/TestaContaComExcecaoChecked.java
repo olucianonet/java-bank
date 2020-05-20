@@ -1,3 +1,5 @@
+package testes;
+import net.oluciano.modelos.Conta;
 
 public class TestaContaComExcecaoChecked {
 

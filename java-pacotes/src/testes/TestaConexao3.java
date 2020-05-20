@@ -1,3 +1,5 @@
+package testes;
+import net.oluciano.modelos.ConexaoCloseable;
 
 public class TestaConexao3  {
 

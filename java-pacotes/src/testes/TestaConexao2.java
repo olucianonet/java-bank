@@ -1,3 +1,5 @@
+package testes;
+import net.oluciano.modelos.Conexao;
 
 public class TestaConexao2 {
 
