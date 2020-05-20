@@ -1,4 +1,4 @@
-package testes;
+package net.oluciano.testes;
 import net.oluciano.modelos.ConexaoCloseable;
 
 public class TestaConexao3  {

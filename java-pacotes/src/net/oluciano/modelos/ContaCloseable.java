@@ -1,5 +1,5 @@
 package net.oluciano.modelos;
-import exceptions.SaldoInsuficienteException;
+import net.oluciano.exceptions.SaldoInsuficienteException;
 
 @Deprecated
 public class ContaCloseable{

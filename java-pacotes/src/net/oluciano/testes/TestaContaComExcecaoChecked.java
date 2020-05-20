@@ -1,11 +1,11 @@
-package testes;
-import net.oluciano.modelos.Conta;
+package net.oluciano.testes;
+import net.oluciano.modelos.herdada.ContaHerdada;
 
 public class TestaContaComExcecaoChecked {
 
 	public static void main(String[] args) {
 
-		Conta c = new Conta();
+		ContaHerdada c = new ContaHerdada();
 
 		try {
 

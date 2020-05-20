@@ -1,21 +1,28 @@
 package net.oluciano.modelos;
-import exceptions.SaldoInsuficienteException;
 
-public class Conta {
+import net.oluciano.exceptions.SaldoInsuficienteException;
+
+// Classes sem modificador de acesso é visivel somente no pacote
+class Conta {
 
 	private double saldo;
-	
-	public void deposita(double valor) {		
-		this.saldo += valor;		
+	// package private
+	int numero = 1;
+
+	public void setNumero(int numero){
+		this.numero = numero;
 	}
 	
-	public void saca(double valor) throws SaldoInsuficienteException{		
-		if (this.saldo < valor){
+	public void deposita(double valor) {
+		this.saldo += valor;
+	}
+
+	public void saca(double valor) throws SaldoInsuficienteException {
+		if (this.saldo < valor) {
 			throw new SaldoInsuficienteException(
-					"Saldo: " + this.saldo + ", Saque: " + valor +
-					". Saldo insuficiente!");
+					"Saldo: " + this.saldo + ", Saque: " + valor + ". Saldo insuficiente!");
 		}
-		
+
 		this.saldo -= valor;
 	}
 

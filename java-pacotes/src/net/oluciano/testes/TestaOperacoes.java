@@ -1,12 +1,12 @@
-package testes;
-import exceptions.SaldoInsuficienteException;
-import net.oluciano.modelos.Conta;
+package net.oluciano.testes;
+import net.oluciano.exceptions.SaldoInsuficienteException;
+import net.oluciano.modelos.herdada.ContaHerdada;
 
 public class TestaOperacoes {
 
 	public static void main(String[] args) {
 
-		Conta c = new Conta();
+		ContaHerdada c = new ContaHerdada();
 		c.deposita(100.0);
 		System.out.println("Saldo: " + c.getSaldo());
 		

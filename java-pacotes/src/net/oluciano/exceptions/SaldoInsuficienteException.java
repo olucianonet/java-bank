@@ -1,4 +1,4 @@
-package exceptions;
+package net.oluciano.exceptions;
 
 public class SaldoInsuficienteException extends Exception {
 
