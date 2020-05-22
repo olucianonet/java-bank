@@ -33,5 +33,11 @@ public class Conta {
 	public String meuToString(){
 		return String.format("Número: %d, Saldo: %.2f", getNumero(), getSaldo());
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// Considera que se o número é o mesmo e o saldo é o mesmo, então é a mesma conta.
+		return (this.getNumero() == ((Conta) obj).getNumero()) && (this.getSaldo() == ((Conta) obj).getSaldo());
+	}
 
 }
