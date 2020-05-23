@@ -38,5 +38,9 @@ public class Aluno implements Comparable<Aluno>{
 	public int compareTo(Aluno aluno) {
 		return this.getNome().compareTo(aluno.getNome());
 	}
+
+	public String getCPF() {
+		return cpf;
+	}
 	
 }
