@@ -20,7 +20,7 @@ public class TestaLeitura {
 		 */
 		
 		// Somente lê bytes
-		InputStream fis = new FileInputStream("lorem.txt");
+		InputStream fis = new FileInputStream("lorem-reader.txt");
 		// transforma byte em caracteres
 		Reader isr = new InputStreamReader(fis);
 		// leitura de linhas inteiras
