@@ -46,4 +46,16 @@ public class Grupo {
 		return Collections.unmodifiableList(this.alunos);
 	}
 	
+	public int getSomaIdades(){
+//		int somaDasIdades = 0;
+//				
+//		for (Aluno aluno : alunos) {
+//				somaDasIdades += aluno.getIdade();	
+//		}
+		
+		return this.alunos.stream().mapToInt(Aluno::getIdade).sum();
+		
+//		return somaDasIdades;
+	}
+	
 }
