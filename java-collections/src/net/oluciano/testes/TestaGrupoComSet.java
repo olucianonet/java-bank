@@ -14,6 +14,7 @@ public class TestaGrupoComSet {
 		AlunoComCPF a3 = new AlunoComCPF("Carla", "Menezes", 22, 1.65, "Git", "213");
 		AlunoComCPF a4 = new AlunoComCPF("Beatriz", "Benedito", 21, 1.80, "Android", "132");
 		AlunoComCPF a5 = new AlunoComCPF("Luciano", "Cunha", 39, "289", "Git");		
+		// AlunoComCPF a6 = new AlunoComCPF(null, "Cunha", 39, "289", "Git");
 		
 		Set<AlunoComCPF> alunos = new HashSet<>();
 		alunos.add(a1);
@@ -27,9 +28,14 @@ public class TestaGrupoComSet {
 		System.out.println(gcs);
 		
 		gcs.adicionaAluno(a4);
+		gcs.adicionaAluno(a4);
+		gcs.adicionaAluno(a4);
 		
 		System.out.println();
 		System.out.println(gcs);
+		
+		System.out.println();
+		System.out.println("O aluno " + a4 + " já está no grupo?: " + gcs.getAlunos().contains(a4));
 	}
 
 }
