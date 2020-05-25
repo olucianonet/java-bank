@@ -13,6 +13,11 @@ public class AlunoComCPF extends Aluno {
 		this.cpf = cpf;
 	}
 	
+	public AlunoComCPF(String nome, String sobrenome, int idade, String cpf, String curso) {
+		super(nome, sobrenome, idade, 0, curso);
+		this.cpf = cpf;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		
