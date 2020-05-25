@@ -1,6 +1,5 @@
 package net.oluciano.modelos;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -47,15 +46,9 @@ public class Grupo {
 	}
 	
 	public int getSomaIdades(){
-//		int somaDasIdades = 0;
-//				
-//		for (Aluno aluno : alunos) {
-//				somaDasIdades += aluno.getIdade();	
-//		}
-		
+
 		return this.alunos.stream().mapToInt(Aluno::getIdade).sum();
 		
-//		return somaDasIdades;
 	}
 	
 }
