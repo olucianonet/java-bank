@@ -54,7 +54,7 @@ public class AlunoComCPF extends Aluno {
 
 	@Override
 	public String toString() {
-		return String.format("Nome: %s, CPF: %s" , getNome(), getCPF());
+		return String.format("Nome: %s, CPF: %s, Curso: %s" , getNome(), getCPF(), getCurso());
 	}
 	
 

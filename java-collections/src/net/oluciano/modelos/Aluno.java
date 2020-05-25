@@ -23,4 +23,8 @@ public class Aluno extends Pessoa implements Comparable<Aluno>{
 		return super.getNomeCompleto().compareTo(aluno.getNomeCompleto());
 	}
 	
+	public String getCurso() {
+		return curso;
+	}
+	
 }
