@@ -22,4 +22,5 @@ public class Aluno extends Pessoa implements Comparable<Aluno>{
 	public int compareTo(Aluno aluno) {
 		return super.getNomeCompleto().compareTo(aluno.getNomeCompleto());
 	}
+	
 }

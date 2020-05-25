@@ -23,7 +23,7 @@ public class Pessoa implements Serializable{
 
 	@Override
 	public String toString() {
-		return String.format("Nome: %s, Sobrenome: %s, Idade: %d, Altura: %.2f", 
+		return String.format("\nNome: %s, Sobrenome: %s, Idade: %d, Altura: %.2f", 
 				nome, sobrenome, idade, altura);
 	}
 
