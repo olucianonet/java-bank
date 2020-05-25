@@ -1,7 +1,13 @@
 package net.oluciano.modelos;
 
-public class Pessoa {
+import java.io.Serializable;
 
+public class Pessoa implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nome;
 	private String sobrenome;
 	private int idade;
@@ -20,5 +26,4 @@ public class Pessoa {
 		return String.format("Nome: %s,%nSobrenome: %s,%nIdade: %d,%nAltura: %.2f", 
 				nome, sobrenome, idade, altura);
 	}
-
 }
