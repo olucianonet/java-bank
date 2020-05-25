@@ -20,9 +20,20 @@ public class Pessoa implements Serializable{
 		this.idade = idade;
 		this.altura = altura;
 	}
+	
+	public Pessoa(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
 
 	@Override
 	public String toString() {
+		
+		if (sobrenome == null){
+			return String.format("Nome: %s, Idade: %d", 
+					nome, idade);
+		}
+		
 		return String.format("\nNome: %s, Sobrenome: %s, Idade: %d, Altura: %.2f", 
 				nome, sobrenome, idade, altura);
 	}
