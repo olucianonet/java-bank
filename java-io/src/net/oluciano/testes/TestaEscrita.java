@@ -18,7 +18,7 @@ public class TestaEscrita {
 		 * Classes abstratas e concretas para escrita e leitura.
 		 */
 		
-		OutputStream fos = new FileOutputStream("lorem-write.txt");
+		OutputStream fos = new FileOutputStream("lorem-write2.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		
