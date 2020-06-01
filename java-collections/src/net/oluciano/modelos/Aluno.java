@@ -1,6 +1,32 @@
 package net.oluciano.modelos;
 
-public class Aluno extends Pessoa implements Comparable<Aluno>{
+public class Aluno extends Pessoa implements Comparable<Aluno>
+{
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((curso == null) ? 0 : curso.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (curso == null) {
+			if (other.curso != null)
+				return false;
+		} else if (!curso.equals(other.curso))
+			return false;
+		return true;
+	}
 
 	/**
 	 * http://luizricardo.org/2014/10/nuances-sobre-serializacao-de-objetos-com-heranca-em-java/
@@ -28,3 +54,4 @@ public class Aluno extends Pessoa implements Comparable<Aluno>{
 	}
 	
 }
+
